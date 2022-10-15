@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 18</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 09/09/2022
+    </h6>
+    <p>Quantos ônibus você precisa pegar?</p>
+    <input type="number" id="input_qtd_onibus">
+    <br><br>
+    <p>Quantos trens você precisa pegar?</p>
+    <input type="number" id="input_qtd_trens">
+    <br><br>
+    <p>Quantos metrôs você precisa pegar?</p>
+    <input type="number" id="input_qtd_metros">
+    <br><br>
+    <button onclick="exibir_trajeto()">#Partiu trajeto</button>
+    <br><br>
+    <div id="div_trajeto"></div>
+</body>
+</html>
+<script>
+    function exibir_trajeto(){
+        var qtd_onibus = Number(input_qtd_onibus.value)
+        var qtd_trens = Number(input_qtd_trens.value)
+        var qtd_metros = Number(input_qtd_metros.value)
+        var contador_onibus = 0
+        var contador_trens = 0
+        var contador_metros = 0
+
+        while(++contador_onibus<=qtd_onibus)
+        {
+            div_trajeto.innerHTML += `<span style="color: red;">Pegando o ${contador_onibus}º busão</span><br><br>`
+        }
+
+        while(++contador_trens<=qtd_trens){
+            div_trajeto.innerHTML += `<span style="color: green;">Pegando o ${contador_trens}º trem</span><br><br>`
+        }
+
+        while(++contador_metros<=qtd_metros){
+            div_trajeto.innerHTML += `<span style="color: blue;">Pegando o ${contador_metros}º metrô</span><br><br>`
+        } 
+    }
+</script>

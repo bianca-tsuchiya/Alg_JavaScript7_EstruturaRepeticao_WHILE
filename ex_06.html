@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 06</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 03/09/2022
+    </h6>
+    <p>Qual é o nome da pessoa que você mais ama na vida?</p>
+    <input id="input_pessoa_amada">
+    <br><br>
+    <p>O quanto você ama essa pessoa?</p>
+    <input type="number" id="input_quanto_ama">
+    <br><br>
+    <button onclick="expressar_amor()">Expressar amor</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function expressar_amor(){
+        var contador = 1
+        var qtd_amor = Number(input_quanto_ama.value)
+
+        while(contador <= qtd_amor)
+        {
+            div_resultado.innerHTML += 
+            `
+            ${contador} - ${input_pessoa_amada.value}, eu te amo! Sempre lembre disso!
+            <br>
+            `
+            contador += 1;
+        }
+    }
+</script>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 14</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 03/09/2022
+    </h6>
+    <p>Digite sua idade:</p>
+    <input type="number" id="input_idade" onkeyup="exibir_fase()">
+    <br><br>
+    <div id="div_idade"></div>
+</body>
+</html>
+<script>
+    function exibir_fase(){
+        var idade = Number(input_idade.value)
+        var contador = 0
+
+        while (contador <= idade)
+        {
+            if(contador<=4)
+            {
+                div_idade.innerHTML += `${contador} anos (Primeira Infância)<br><br>`
+            }
+            else if(contador<=6)
+            {
+                div_idade.innerHTML += `${contador} anos (Pré-escolar)<br><br>`
+            }
+            else if(contador<=10)
+            {
+                div_idade.innerHTML += `${contador} anos (Segunda Infância)<br><br>`
+            }
+            else if(contador<=18)
+            {
+                div_idade.innerHTML += `${contador} anos (Adolescência)<br><br>`
+            }
+            else if(contador<=50)
+            {
+                div_idade.innerHTML += `${contador} anos (Adulto)<br><br>`
+            }
+            else if(contador<=100)
+            {
+                div_idade.innerHTML += `${contador} anos (Melhor idade)<br><br>`
+            }
+            else if(contador>100)
+            {
+                div_idade.innerHTML += `${contador} anos (Ancião)<br><br>`
+            }
+
+            contador++
+        }
+    }
+</script>

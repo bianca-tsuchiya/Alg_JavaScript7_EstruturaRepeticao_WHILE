@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 10</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 03/09/2022
+    </h6>
+    <p>Digite a quantidade de títulos mundiais da FIFA que seu clube tem:</p>
+    <input type="number" id="input_qtd_titulos">
+    <br><br>
+    <button onclick="exibir_trofeus()">Ver troféus</button>
+    <br><br>
+    <div id="div_trofeus"></div>
+</body>
+
+</html>
+<script>
+    function exibir_trofeus() {
+
+        var qtd_trofeus = Number(input_qtd_titulos.value)
+        var contador = 0
+
+        if (qtd_trofeus == 0) {
+            div_trofeus.innerHTML = `<img src="https://ogimg.infoglobo.com.br/in/22860630-dbe-e78/FT1086A/77801235_CI-Rio-de-Janeiro-RJ-06-07-2018-COPA-DO-MUNDO-2018Torcida-no-Alzirao-entre-o-jogo-Br.jpg" alt="torcedor chorando" width="500px">`
+        }
+        else {
+            div_trofeus.innerHTML = ""
+
+            while (++contador <= qtd_trofeus) {
+                div_trofeus.innerHTML += `<img src="https://jpimg.com.br/uploads/2021/01/cassio.jpeg" alt="torcedor chorando" width="500px">`
+            }
+            
+        }
+
+    }
+</script>

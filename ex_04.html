@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 04</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 29/09/2022
+    </h6>
+    <button onclick="mostrar_pares()">S2 Pares</button>
+    <br><br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+<script>
+    function mostrar_pares(){
+        var contador = 0
+
+        while(contador<=100)
+        {
+            // div_resultado.innerHTML += contador + "<br>"
+            // contador += 2
+
+            if(contador % 2 == 0)
+            {
+                div_resultado.innerHTML += contador + "<br>"
+            }
+            contador += 2
+        }
+    }
+</script>

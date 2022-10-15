@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 09</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 03/09/2022
+    </h6>
+    <p>Digite um número:</p>
+    <input type="number" id="input_numero">
+    <br><br>
+    <p>Digite uma frase:</p>
+    <input id="input_frase">
+    <br><br>
+    <button onclick="exibir_frase()">Papagaio</button>
+</body>
+
+</html>
+<script>
+    function exibir_frase() {
+        var numero = Number(input_numero.value)
+        var frase = input_frase.value
+
+        if (frase.length < 3) {
+            alert("Erro! A frase deve conter no mínimo 3 letras.")
+        }
+        else {
+            var contador = 0
+
+            while (++contador <= numero) {
+                alert(frase)
+            }
+        }
+    }
+</script>

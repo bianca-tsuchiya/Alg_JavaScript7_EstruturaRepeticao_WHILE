@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 05</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 29/09/2022
+    </h6>
+    <button onclick="ver_cabalisticos()">Ver os número cabalísticos</button>
+    <br><br>
+    <div id="div_cabalisticos"></div>
+</body>
+</html>
+<script>
+    function ver_cabalisticos(){
+        var contador = 1
+
+        while(contador <= 15)
+        {
+            //3, 4, 7, 10, 12
+            if(
+            contador != 3 && 
+            contador != 4 && 
+            contador != 7 && 
+            contador != 10 && 
+            contador != 12)
+            {
+                div_cabalisticos.innerHTML += 
+                `
+                    ${contador}<br>
+                `
+            }
+            contador += 1
+        }
+    }
+</script>

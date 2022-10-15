@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Algoritmos</title>
+</head>
+
+<body>
+    <h1>JavaScript - Estrutura de repetição (while)</h1>
+    <h2>Exercício 11</h2>
+    <h6>
+        Bianca Namie Hara Tsuchiya - RA: 01222110
+        <br>
+        Data: 03/09/2022
+    </h6>
+    <p>Digite a quantidade de voltas que o carro fará em uma corrida: </p>
+    <input type="number" id="input_qtd_voltas">
+    <br><br>
+    <button onclick="exibir_corrida()">Iniciar corrida!</button>
+    <br><br>
+    <div id="div_resultado_corrida"></div>
+</body>
+
+</html>
+<script>
+    function exibir_corrida() {
+        var qtd_voltas = Number(input_qtd_voltas.value)
+        var contador = 0
+
+        while (++contador <= qtd_voltas) {
+            div_resultado_corrida.innerHTML += `Carro dando a <b>${contador}ª</b> volta<br>`
+
+            if (contador == qtd_voltas) {
+                div_resultado_corrida.innerHTML += "<br>Corrida finalizada!<br><br>"
+            }
+        }
+    }
+</script>
